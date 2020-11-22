@@ -43,23 +43,22 @@ C 节点代表迁移之后 position 节点的前一个节点。
 代码实现：
 
 ```c++
-
 template<class T, class Alloc = alloc>
 class list {
-	...
 	protected:
 		void transfer(iterator position, iterator first, iterator last) {
 		if (position != last) {
-            (*(link_type((*last.node).prev))).next  = position.node;//(1)
-            (*(link_type((*first.node).prev))).next = last.node;//(2)
-            (*(link_type((*position.node).prev))).next = first.node;//(3)
-            link_type tmp = link_type((*position.node).prev);//(4)
-            (*position.node).prev = (*last.node).prev;//(5)
-            (*last.node).prev = (*first.node).prev;//(6)
-            (*first.node).prev = tmp;//(7)
-        }
+      (*(link_type((*last.node).prev))).next  = position.node;//(1)
+      (*(link_type((*first.node).prev))).next = last.node;//(2)
+      (*(link_type((*position.node).prev))).next = first.node;//(3)
+      link_type tmp = link_type((*position.node).prev);//(4)
+      (*position.node).prev = (*last.node).prev;//(5)
+      (*last.node).prev = (*first.node).prev;//(6)
+      (*first.node).prev = tmp;//(7)
+    }
 	}
 }
 ```
 
 至此，完成迁移。
+
