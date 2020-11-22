@@ -18,7 +18,7 @@
 
 下面就先用一张图来看看它的逻辑。
 
-![list-transfer.png](https://i.loli.net/2020/11/22/SwR9sgNhQOoKa6T.jpg)
+<div align="center"> <img src="https://i.loli.net/2020/11/22/SwR9sgNhQOoKa6T.jpg"width="500"/> </div><br>
 
 其中 A 节点代表 迁移之后 `first` 节点的前一个节点。
 
