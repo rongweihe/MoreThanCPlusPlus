@@ -177,5 +177,4 @@ protected:
         uninitialized_fill_n(result, n, x);
         return result;
     }
-    
 };
